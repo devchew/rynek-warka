@@ -1,0 +1,109 @@
+---
+const menuCategories = [
+  {
+    title: "Oferta Specjalna",
+    icon: "sparkles",
+    items: [
+      { name: "Naturalny tłoczony sok jabłkowy 'Gabler'", price: "15 zł" },
+      { name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
+      { name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
+      { name: "Piwo rzemieślnicze 'Browarka'", price: "16 zł" },
+    ]
+  },
+  {
+    title: "Kawy",
+    icon: "coffee",
+    items: [
+      { name: "Frappe 'kawa mrożona z lodami'", price: "17 zł" },
+      { name: "Caffé Latte", price: "14 zł" },
+      { name: "Latte Macchiato", price: "15 zł" },
+      { name: "Cappuccino", price: "13 zł" },
+      { name: "Caffé Crème 'klasyczna, czarna'", price: "10 zł" },
+      { name: "Espresso Macchiato", price: "11 zł" },
+      { name: "Espresso", price: "9 zł" },
+    ]
+  },
+  {
+    title: "Herbata",
+    icon: "tea",
+    items: [
+      { name: "Pure Clasic - Czarna", price: "10 zł" },
+      { name: "Pure Earl Grey", price: "10 zł" },
+      { name: "Pure Roibos Infusion", price: "12 zł" },
+      { name: "Pure Green Tea", price: "12 zł" },
+      { name: "Pure Peppermint", price: "12 zł" },
+      { name: "Pure Fruit Infusion", price: "12 zł" },
+    ]
+  }
+];
+
+const getIcon = (iconName) => {
+  switch(iconName) {
+    case 'sparkles':
+      return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+              </svg>`;
+    case 'coffee':
+      return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>`;
+    case 'tea':
+      return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+              </svg>`;
+    default:
+      return '';
+  }
+};
+---
+
+<section class="py-16 bg-[url('/img/menu-bg.svg')] bg-fixed bg-center">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-800 mb-4">Menu Kawiarni</h2>
+      <div class="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
+      <p class="text-stone-600 max-w-3xl mx-auto">
+        Odkryj naszą wyjątkową ofertę kaw, herbat i deserów. Menu pełne jest smaków, które zadowolą każde podniebienie.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {menuCategories.map((category, index) => (
+        <div 
+          class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
+          style={{transitionDelay: `${index * 100}ms`}}
+        >
+          <div class="bg-amber-100 px-6 py-4 flex items-center justify-between">
+            <h3 class="font-serif text-xl font-bold text-amber-800">{category.title}</h3>
+            <div class="text-amber-700" set:html={getIcon(category.icon)} />
+          </div>
+          
+          <div class="p-6">
+            <ul class="space-y-3">
+              {category.items.map(item => (
+                <li class="flex justify-between pb-2 border-b border-stone-100 last:border-0">
+                  <span class="text-stone-700">{item.name}</span>
+                  <span class="font-medium text-amber-700">{item.price}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {category.title === "Oferta Specjalna" && (
+            <div class="px-6 pb-6 text-center">
+              <a 
+                href="/kawiarnia" 
+                class="inline-flex items-center gap-1 text-amber-700 hover:text-amber-900 font-medium transition-colors group"
+              >
+                <span>Zobacz pełne menu</span>
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

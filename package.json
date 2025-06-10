@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "Rynek-warka",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,13 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.9.2"
+    "@astrojs/react": "^4.3.0",
+    "@tailwindcss/vite": "^4.1.8",
+    "@types/react": "^19.1.7",
+    "@types/react-dom": "^19.1.6",
+    "astro": "^5.9.2",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.1.8"
   }
 }

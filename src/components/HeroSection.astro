@@ -1,0 +1,77 @@
+---
+---
+
+<section class="min-h-[80vh] flex items-center bg-[url('/img/hero-bg.jpg')] bg-cover bg-center bg-fixed text-white relative">
+  <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <div class="container mx-auto px-4 py-16 md:py-24 relative z-10">
+    <div class="max-w-2xl animate-fade-in">
+      <div class="inline-block mb-3 opacity-90">
+        <span class="bg-amber-600 text-white text-sm px-3 py-1 rounded-full font-medium">Kawiarnia & Galeria</span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-slide-up" style="animation-delay: 200ms;">
+        Aromatyczna kawa <span class="text-amber-400">w stylowym wnętrzu</span>
+      </h1>
+      <p class="text-lg md:text-xl mb-8 opacity-90 animate-slide-up" style="animation-delay: 400ms;">
+        Pyszna kawa w towarzystwie lokalnego rękodzieła. Miejsce z duszą w klimacie babcinych koronek.
+      </p>
+      <div class="flex flex-wrap gap-4 animate-slide-up" style="animation-delay: 600ms;">
+        <a 
+          href="/kawiarnia" 
+          class="bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 inline-flex items-center gap-2"
+        >
+          <span>Zobacz menu</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+        <a 
+          href="/kontakt" 
+          class="bg-transparent border-2 border-white hover:bg-white hover:text-stone-800 text-white px-6 py-3 rounded-md font-medium transition-all duration-300 inline-flex items-center gap-2"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+          <span>Znajdź nas</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="absolute bottom-8 w-full text-center animate-bounce">
+    <a href="#about" aria-label="Scroll down" class="inline-block text-white opacity-80 hover:opacity-100 transition-opacity">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+      </svg>
+    </a>
+  </div>
+  
+  <style>
+    @keyframes fade-in {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slide-up {
+      from { 
+        opacity: 0; 
+        transform: translateY(30px);
+      }
+      to { 
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .animate-fade-in {
+      animation: fade-in 1s ease-out forwards;
+    }
+    
+    .animate-slide-up {
+      opacity: 0;
+      animation: slide-up 0.8s ease-out forwards;
+    }
+  </style>
+</section>
+
+<div id="about"></div>

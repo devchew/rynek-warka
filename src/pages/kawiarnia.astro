@@ -1,0 +1,122 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+
+const menuCategories = [
+  {
+    title: "Oferta Specjalna",
+    items: [
+      { name: "Naturalny tłoczony sok jabłkowy 'Gabler'", price: "15 zł" },
+      { name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
+      { name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
+      { name: "Piwo rzemieślnicze 'Browarka'", price: "16 zł" },
+    ]
+  },
+  {
+    title: "Kawy",
+    items: [
+      { name: "Frappe 'kawa mrożona z lodami'", price: "17 zł" },
+      { name: "Caffé Latte", price: "14 zł" },
+      { name: "Latte Macchiato", price: "15 zł" },
+      { name: "Cappuccino", price: "13 zł" },
+      { name: "Caffé Crème 'klasyczna, czarna'", price: "10 zł" },
+      { name: "Espresso Macchiato", price: "11 zł" },
+      { name: "Espresso", price: "9 zł" },
+    ]
+  },
+  {
+    title: "Herbata",
+    items: [
+      { name: "Pure Clasic - Czarna", price: "10 zł" },
+      { name: "Pure Earl Grey", price: "10 zł" },
+      { name: "Pure Roibos Infusion", price: "12 zł" },
+      { name: "Pure Green Tea", price: "12 zł" },
+      { name: "Pure Peppermint", price: "12 zł" },
+      { name: "Pure Fruit Infusion", price: "12 zł" },
+    ]
+  },
+  {
+    title: "Napoje",
+    items: [
+      { name: "Woda z lodem i cytryną", price: "8 zł" },
+      { name: "Sok naturalny", price: "12 zł" },
+      { name: "Sok", price: "9 zł" },
+      { name: "Czekolada", price: "14 zł" },
+      { name: "Fuzetea", price: "9 zł" },
+      { name: "Woda gazowana", price: "7 zł" },
+      { name: "Napój energetyczny Yabu", price: "12 zł" },
+      { name: "Fanta, Sprite, Coca-Cola", price: "9 zł" },
+    ]
+  },
+  {
+    title: "Smoothies",
+    items: [
+      { name: "Mango", price: "15 zł" },
+      { name: "Owocowy", price: "15 zł" },
+      { name: "Tropikalny", price: "15 zł" },
+      { name: "Pomarańczowy", price: "15 zł" },
+    ]
+  },
+  {
+    title: "Ciasta i Desery",
+    items: [
+      { name: "Rurka z bitą śmietaną", price: "9 zł" },
+      { name: "Ciasto dnia", price: "14 zł" },
+      { name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
+      { name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
+      { name: "Desery lodowe", price: "16 zł" },
+    ]
+  },
+  {
+    title: "Przekąski",
+    items: [
+      { name: "Zestaw przekąsek z dip'ami", price: "24 zł" },
+      { name: "Nachos", price: "17 zł" },
+      { name: "Paluszki", price: "9 zł" },
+      { name: "Orzeszki", price: "9 zł" },
+    ]
+  }
+];
+---
+
+<Layout title="Menu Kawiarni | Rynek Kawiarnia Galeria | Warka">
+  <Header />
+  <main>
+    <section class="py-16 md:py-24 bg-[url('/img/menu-header.jpg')] bg-cover bg-center text-white relative">
+      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Menu Kawiarni
+          </h1>
+          <div class="w-24 h-1 bg-amber-500 mx-auto mb-8"></div>
+          <p class="text-lg md:text-xl">
+            Odkryj nasze wyjątkowe kawy, desery i przekąski
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {menuCategories.map((category) => (
+            <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 class="font-serif text-xl font-bold text-amber-800 mb-6 text-center border-b border-stone-100 pb-2">
+                {category.title}
+              </h3>
+              <ul class="space-y-3">
+                {category.items.map((item) => (
+                  <li class="flex justify-between pb-2 border-b border-stone-100 last:border-0">
+                    <span class="text-stone-700">{item.name}</span>
+                    <span class="font-medium">{item.price}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
