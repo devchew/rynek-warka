@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import MenuItemHighlight from '../components/MenuItemHighlight';
 
 const menuCategories = [
   {
@@ -94,11 +95,16 @@ const menuCategories = [
             Odkryj nasze wyjątkowe kawy, desery i przekąski
           </p>
         </div>
-      </div>
-    </section>
+      </div>    </section>
 
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
+        <MenuItemHighlight client:visible items={[
+          { name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
+          { name: "Frappe 'kawa mrożona z lodami'", price: "17 zł" },
+          { name: "Piwo rzemieślnicze 'Browarka'", price: "16 zł" }
+        ]} />
+        
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {menuCategories.map((category) => (
             <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">

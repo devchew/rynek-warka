@@ -4,21 +4,42 @@ import Header from '../components/Header.astro';
 ---
 
 <Layout title="Strona nie znaleziona | Rynek Kawiarnia Galeria | Warka">
-  <Header />
-  <main>
+  <Header />  <main>
     <section class="py-24 md:py-32 bg-white">
       <div class="container mx-auto px-4 text-center">
-        <h1 class="font-serif text-9xl font-bold text-amber-600 mb-4">404</h1>
+        <div class="mb-8 flex justify-center">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" class="text-amber-600">
+            <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="8" class="animate-[spin_20s_linear_infinite]" />
+            <path d="M65,80 Q100,40 135,80" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
+            <circle cx="65" cy="110" r="8" fill="currentColor">
+              <animate attributeName="cy" values="110;115;110;105;110" dur="2s" repeatCount="indefinite" />
+            </circle>
+            <circle cx="135" cy="110" r="8" fill="currentColor">
+              <animate attributeName="cy" values="110;105;110;115;110" dur="2s" repeatCount="indefinite" />
+            </circle>
+            <path d="M65,140 Q100,170 135,140" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" class="animate-[pulse_3s_ease-in-out_infinite]" />
+          </svg>
+        </div>
+        <h1 class="font-serif text-9xl font-bold text-amber-600 mb-4 animate-bounce">404</h1>
         <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-800 mb-6">Strona nie znaleziona</h2>
         <p class="text-stone-600 max-w-2xl mx-auto mb-10">
-          Przepraszamy, ale strona której szukasz nie istnieje lub została przeniesiona.
+          Przepraszamy, ale strona której szukasz nie istnieje lub została przeniesiona. 
+          Może warto wrócić do strony głównej i spróbować ponownie?
         </p>
-        <a href="/" class="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-          </svg>
-          Wróć na stronę główną
-        </a>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="inline-flex items-center justify-center gap-2 px-6 py-3 bg-amber-600 text-white rounded-md hover:bg-amber-700 transition-all hover:shadow-lg hover:-translate-y-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+            </svg>
+            Strona główna
+          </a>
+          <a href="/kontakt" class="inline-flex items-center justify-center gap-2 px-6 py-3 border-2 border-amber-600 text-amber-600 rounded-md hover:bg-amber-50 transition-all">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Kontakt
+          </a>
+        </div>
       </div>
     </section>
   </main>

@@ -5,7 +5,49 @@ import HeroSection from '../components/HeroSection.astro';
 import AboutSection from '../components/AboutSection.astro';
 import MenuPreviewSection from '../components/MenuPreviewSection.astro';
 import GalleryPreviewSection from '../components/GalleryPreviewSection.astro';
+import EventsSection from '../components/EventsSection.astro';
 import ContactSection from '../components/ContactSection.astro';
+import TestimonialsSection from '../components/TestimonialsSection.jsx';
+import Newsletter from '../components/Newsletter.jsx';
+import StructuredData from '../components/StructuredData.astro';
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Rynek Kawiarnia Galeria",
+  "image": "https://rynek-warka.pl/img/hero-bg.jpg",
+  "url": "https://rynek-warka.pl",
+  "telephone": "+48 533 537 813",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plac Stefana Czarnieckiego 11",
+    "addressLocality": "Warka",
+    "postalCode": "05-660",
+    "addressCountry": "PL"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "51.784356",
+    "longitude": "21.190554"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      "opens": "10:00",
+      "closes": "21:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Sunday",
+      "opens": "11:00",
+      "closes": "19:00"
+    }
+  ],
+  "servesCuisine": "Coffee, Desserts",
+  "hasMenu": "https://rynek-warka.pl/kawiarnia"
+};
 ---
 
 <Layout title="Rynek Kawiarnia Galeria | Warka">
@@ -14,7 +56,11 @@ import ContactSection from '../components/ContactSection.astro';
     <HeroSection />
     <AboutSection />
     <MenuPreviewSection />
+    <TestimonialsSection client:visible />
     <GalleryPreviewSection />
+    <EventsSection />
+    <Newsletter client:visible />
     <ContactSection />
   </main>
+  <StructuredData data={structuredData} />
 </Layout>

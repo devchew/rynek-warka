@@ -1,0 +1,40 @@
+---
+const team = [
+  {
+    name: "Gosia",
+    role: "Współzałożycielka",
+    bio: "Pasjonatka dobrej kawy i lokalnej sztuki. Odpowiada za menu i klimat kawiarni.",
+    image: "/img/about-team-1.jpg" // Placeholder - would need to be replaced with real image
+  },
+  {
+    name: "Aga",
+    role: "Współzałożycielka",
+    bio: "Miłośniczka rękodzieła i tradycyjnych wypieków. Zajmuje się galerią i współpracą z artystami.",
+    image: "/img/about-team-2.jpg" // Placeholder - would need to be replaced with real image
+  }
+];
+---
+
+<div class="py-12">
+  <h2 class="font-serif text-3xl font-bold text-stone-800 mb-12 text-center">Nasz zespół</h2>
+  
+  <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+    {team.map(member => (
+      <div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 group">
+        <div class="h-64 overflow-hidden">
+          <img 
+            src={member.image} 
+            alt={`${member.name} - ${member.role}`}
+            class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+            onError={`this.src='/img/about-1.jpg'; this.onError=null;`} // Fallback if image doesn't exist
+          />
+        </div>
+        <div class="p-6">
+          <h3 class="font-serif text-2xl font-bold text-amber-800 mb-1">{member.name}</h3>
+          <p class="text-amber-600 mb-3">{member.role}</p>
+          <p class="text-stone-600">{member.bio}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>

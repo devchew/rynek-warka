@@ -1,0 +1,151 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import BlogPost from "../components/BlogPost.astro";
+import FadeInSection from "../components/FadeInSection";
+
+// Sample blog posts - in a real application, these would come from a CMS or API
+const blogPosts = [
+  {
+    id: "1",
+    title: "Nowa dostawa produktów rękodzielniczych w naszej galerii",
+    excerpt: "Odkryj najnowszą kolekcję wyrobów ceramicznych i innych produktów rękodzielniczych od lokalnych artystów, które właśnie dotarły do naszej galerii.",
+    date: new Date(2025, 5, 5),  // June 5, 2025
+    image: "/img/gallery-1.jpg",
+    author: "Anna Kowalska",
+    slug: "nowa-dostawa-produktow-rekodzielniczych",
+    category: "Sztuka"
+  },
+  {
+    id: "2",
+    title: "Nowe letnie menu - świeże smaki i lokalne produkty",
+    excerpt: "Z przyjemnością prezentujemy nasze nowe letnie menu, w którym znajdziecie mnóstwo sezonowych smaków, lekkich deserów i orzeźwiających napojów.",
+    date: new Date(2025, 5, 2),  // June 2, 2025
+    image: "/img/gallery-3.jpg",
+    author: "Piotr Nowak",
+    slug: "nowe-letnie-menu-kawiarni",
+    category: "Kawiarnia"
+  },
+  {
+    id: "3",
+    title: "Warsztaty ceramiczne dla dzieci - zapisy już otwarte",
+    excerpt: "Zapraszamy najmłodszych na wyjątkowe warsztaty ceramiczne, podczas których będą mogli stworzyć swoje pierwsze dzieła z gliny pod okiem doświadczonych instruktorów.",
+    date: new Date(2025, 4, 28),  // May 28, 2025
+    image: "/img/gallery-2.jpg",
+    author: "Magdalena Wiśniewska",
+    slug: "warsztaty-ceramiczne-dla-dzieci",
+    category: "Warsztaty"
+  },
+  {
+    id: "4",
+    title: "Współpraca z lokalnymi producentami serów i wędlin",
+    excerpt: "Nawiązaliśmy współpracę z lokalnymi producentami serów i wędlin, dzięki czemu możemy oferować Wam jeszcze więcej regionalnych przysmaków.",
+    date: new Date(2025, 4, 20),  // May 20, 2025
+    image: "/img/gallery-5.jpg",
+    author: "Jan Kowalski",
+    slug: "wspolpraca-z-lokalnymi-producentami",
+    category: "Kawiarnia"
+  },
+  {
+    id: "5",
+    title: "Wystawa fotografii 'Warka wczoraj i dziś' - zapraszamy!",
+    excerpt: "Zapraszamy na nową wystawę fotografii, która przedstawia zmiany, jakie zaszły w naszym mieście na przestrzeni ostatnich dekad.",
+    date: new Date(2025, 4, 15),  // May 15, 2025
+    image: "/img/gallery-6.jpg",
+    author: "Anna Kowalska",
+    slug: "wystawa-fotografii-warka-wczoraj-i-dzis",
+    category: "Sztuka"
+  },
+  {
+    id: "6",
+    title: "Jak wspieramy lokalną społeczność? Nasze inicjatywy",
+    excerpt: "Dowiedz się więcej o naszych inicjatywach wspierających lokalną społeczność i o tym, jak możesz się do nich przyłączyć.",
+    date: new Date(2025, 4, 10),  // May 10, 2025
+    image: "/img/gallery-7.jpg",
+    author: "Magdalena Wiśniewska",
+    slug: "jak-wspieramy-lokalna-spolecznosc",
+    category: "Społeczność"
+  }
+];
+
+// Sort posts by date (newest first)
+const sortedPosts = [...blogPosts].sort((a, b) => b.date.getTime() - a.date.getTime());
+const featuredPost = sortedPosts[0];
+const regularPosts = sortedPosts.slice(1);
+
+// Get list of unique categories
+const categories = [...new Set(blogPosts.map(post => post.category))];
+---
+
+<Layout 
+  title="Blog | Rynek Kawiarnia Galeria | Warka" 
+  description="Aktualności, wydarzenia i informacje z życia Rynek Kawiarnia Galeria w Warce."
+>
+  <Header
+    title="Blog"
+    subtitle="Aktualności z życia Rynek Kawiarnia Galeria"
+    image="/img/gallery-header.jpg"
+  />
+
+  <main class="py-12">
+    <div class="container mx-auto px-4">
+      <!-- Featured post -->
+      <FadeInSection client:visible>
+        <div class="mb-12">
+          <BlogPost post={featuredPost} featured={true} />
+        </div>
+      </FadeInSection>
+      
+      <!-- Categories filter -->
+      <div class="mb-8 flex flex-wrap gap-2 justify-center">
+        <a 
+          href="/blog" 
+          class="px-4 py-2 rounded-full bg-amber-600 text-white text-sm font-medium transition-colors"
+        >
+          Wszystkie
+        </a>
+        {categories.map(category => (
+          <a 
+            href={`/blog/kategoria/${category.toLowerCase()}`}
+            class="px-4 py-2 rounded-full bg-stone-200 text-stone-800 hover:bg-stone-300 text-sm font-medium transition-colors"
+          >
+            {category}
+          </a>
+        ))}
+      </div>
+      
+      <!-- Regular posts grid -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {regularPosts.map((post, index) => (
+          <FadeInSection client:visible delay={index * 0.1}>
+            <BlogPost post={post} />
+          </FadeInSection>
+        ))}
+      </div>
+      
+      <!-- Pagination (for future use) -->
+      <div class="mt-12 flex justify-center">
+        <div class="inline-flex rounded-md shadow">
+          <a
+            href="#"
+            class="py-2 px-4 border border-stone-300 bg-white text-stone-700 rounded-l-md hover:bg-stone-100 transition-colors"
+          >
+            &laquo; Poprzednia
+          </a>
+          <a
+            href="#"
+            class="py-2 px-4 border-t border-b border-r border-stone-300 bg-white text-stone-700 hover:bg-stone-100 transition-colors"
+          >
+            Strona 1
+          </a>
+          <a
+            href="#"
+            class="py-2 px-4 border-t border-b border-r border-stone-300 bg-amber-600 text-white rounded-r-md"
+          >
+            Strona 2
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -1,0 +1,69 @@
+---
+import BlogPost from "./BlogPost.astro";
+
+// Sample blog posts - in a real application, these would come from a CMS or API
+const blogPosts = [
+  {
+    id: "1",
+    title: "Nowa dostawa produktów rękodzielniczych w naszej galerii",
+    excerpt: "Odkryj najnowszą kolekcję wyrobów ceramicznych i innych produktów rękodzielniczych od lokalnych artystów, które właśnie dotarły do naszej galerii.",
+    date: new Date(2025, 5, 5),  // June 5, 2025
+    image: "/img/gallery-1.jpg",
+    author: "Anna Kowalska",
+    slug: "nowa-dostawa-produktow-rekodzielniczych",
+    category: "Sztuka"
+  },
+  {
+    id: "2",
+    title: "Nowe letnie menu - świeże smaki i lokalne produkty",
+    excerpt: "Z przyjemnością prezentujemy nasze nowe letnie menu, w którym znajdziecie mnóstwo sezonowych smaków, lekkich deserów i orzeźwiających napojów.",
+    date: new Date(2025, 5, 2),  // June 2, 2025
+    image: "/img/gallery-3.jpg",
+    author: "Piotr Nowak",
+    slug: "nowe-letnie-menu-kawiarni",
+    category: "Kawiarnia"
+  },
+  {
+    id: "3",
+    title: "Warsztaty ceramiczne dla dzieci - zapisy już otwarte",
+    excerpt: "Zapraszamy najmłodszych na wyjątkowe warsztaty ceramiczne, podczas których będą mogli stworzyć swoje pierwsze dzieła z gliny pod okiem doświadczonych instruktorów.",
+    date: new Date(2025, 4, 28),  // May 28, 2025
+    image: "/img/gallery-2.jpg",
+    author: "Magdalena Wiśniewska",
+    slug: "warsztaty-ceramiczne-dla-dzieci",
+    category: "Warsztaty"
+  }
+];
+---
+
+<section class="py-16 bg-stone-100">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-playfair font-semibold text-stone-800 mb-4">
+        Aktualności
+      </h2>
+      <p class="max-w-2xl mx-auto text-stone-600">
+        Przeczytaj najnowsze informacje z życia naszej kawiarni i galerii. Dowiedz się o nadchodzących 
+        wydarzeniach, nowych produktach w galerii i sezonowym menu.
+      </p>
+    </div>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {blogPosts.map(post => (
+        <BlogPost post={post} />
+      ))}
+    </div>
+    
+    <div class="mt-10 text-center">
+      <a 
+        href="/blog" 
+        class="inline-flex items-center px-6 py-3 border border-amber-600 text-amber-700 bg-transparent hover:bg-amber-50 font-medium rounded-md transition-colors"
+      >
+        <span>Wszystkie wpisy</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

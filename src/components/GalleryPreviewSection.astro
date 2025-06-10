@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import LazyImage from './LazyImage.jsx';
 
 const galleryItems = [
   {
@@ -36,17 +36,24 @@ const galleryItems = [
       </p>
     </div>
     
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      {galleryItems.map((item, index) => (
-        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500 aspect-square" style={{transitionDelay: `${index * 100}ms`}}>
-          <img 
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">      {galleryItems.map((item, index) => (        <div class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-500 aspect-square" style={{transitionDelay: `${index * 100}ms`}}>          <LazyImage 
             src={item.image} 
             alt={item.title}
-            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            width="100%"
+            height="100%"
+            client:visible
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
             <span class="bg-amber-600 text-white text-xs px-2 py-1 rounded inline-block mb-2 w-fit">{item.category}</span>
             <h3 class="text-white font-medium text-lg">{item.title}</h3>
+            <div class="mt-2 flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-amber-400 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+              </svg>
+              <a href="/galeria" class="text-white text-sm hover:underline">Zobacz więcej</a>
+            </div>
           </div>
         </div>
       ))}
