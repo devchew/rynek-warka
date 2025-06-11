@@ -63,8 +63,8 @@ export default function Timeline() {
 									<div
 										className={`flex items-center justify-center h-12 w-12 rounded-full shadow-md transition-all duration-300 z-10 ${
 											activeEvent === index
-												? "bg-amber-600 text-white scale-110"
-												: "bg-white text-amber-600"
+												? "bg-amber-800 text-white scale-110"
+												: "bg-white text-amber-800"
 										}`}
 									>
 										<span className="font-bold">{event.year}</span>

@@ -46,7 +46,7 @@ export default function TestimonialsSection() {
 					<h2 className="font-serif text-3xl md:text-4xl font-bold text-stone-800 mb-4">
 						Co mówią nasi goście
 					</h2>
-					<div className="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
+					<div className="w-24 h-1 bg-amber-800 mx-auto mb-6"></div>
 				</div>
 
 				<div className="max-w-4xl mx-auto">
@@ -67,7 +67,7 @@ export default function TestimonialsSection() {
 													<svg
 														key={i}
 														xmlns="http://www.w3.org/2000/svg"
-														className={`h-6 w-6 ${i < testimonial.rating ? "text-amber-500" : "text-stone-300"}`}
+														className={`h-6 w-6 ${i < testimonial.rating ? "text-amber-800" : "text-stone-300"}`}
 														fill="currentColor"
 														viewBox="0 0 24 24"
 													>
@@ -93,7 +93,7 @@ export default function TestimonialsSection() {
 									key={index}
 									className={`w-3 h-3 rounded-full transition-colors duration-300 ${
 										activeIndex === index
-											? "bg-amber-600"
+											? "bg-amber-800"
 											: "bg-stone-300 hover:bg-amber-400"
 									}`}
 									onClick={() => setActiveIndex(index)}

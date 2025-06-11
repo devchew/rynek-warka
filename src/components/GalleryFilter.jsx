@@ -29,7 +29,7 @@ export default function GalleryFilter({ categories, items }) {
 							onClick={() => handleCategoryClick(category)}
 							className={`px-4 py-2 rounded-full text-sm md:text-base transition-colors ${
 								category === activeCategory
-									? "bg-amber-600 text-white"
+									? "bg-amber-800 text-white"
 									: "bg-stone-100 text-stone-700 hover:bg-stone-200"
 							}`}
 						>

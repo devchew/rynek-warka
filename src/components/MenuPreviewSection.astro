@@ -61,7 +61,7 @@ const getIcon = (iconName) => {
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
       <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-800 mb-4">Menu Kawiarni</h2>
-      <div class="w-24 h-1 bg-amber-500 mx-auto mb-6"></div>
+      <div class="w-24 h-1 bg-amber-800 mx-auto mb-6"></div>
       <p class="text-stone-600 max-w-3xl mx-auto">
         Odkryj naszą wyjątkową ofertę kaw, herbat i deserów. Menu pełne jest smaków, które zadowolą każde podniebienie.
       </p>
@@ -73,7 +73,7 @@ const getIcon = (iconName) => {
           class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-1"
           style={{transitionDelay: `${index * 100}ms`}}
         >
-          <div class="bg-amber-100 px-6 py-4 flex items-center justify-between">
+          <div class="bg-orange-200 px-6 py-4 flex items-center justify-between">
             <h3 class="font-serif text-xl font-bold text-amber-800">{category.title}</h3>
             <div class="text-amber-700" set:html={getIcon(category.icon)} />
           </div>

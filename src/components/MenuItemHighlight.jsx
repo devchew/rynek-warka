@@ -18,7 +18,7 @@ export default function MenuItemHighlight({ items }) {
 						key={index}
 						className={`p-4 rounded-lg cursor-pointer transition-all ${
 							activeItem === index
-								? "bg-amber-100 shadow-md"
+								? "bg-orange-200 shadow-md"
 								: "bg-white hover:bg-amber-50"
 						}`}
 						onClick={() => setActiveItem(index)}

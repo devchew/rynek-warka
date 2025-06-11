@@ -33,11 +33,11 @@
 	}
 
 	.section-divider {
-		@apply w-24 h-1 bg-amber-500 mx-auto;
+		@apply w-24 h-1 bg-amber-800 mx-auto;
 	}
 
 	.btn-primary {
-		@apply bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition-colors;
+		@apply bg-amber-800 hover:bg-amber-700 text-white px-6 py-3 rounded-md font-medium transition-colors;
 	}
 
 	.btn-secondary {
