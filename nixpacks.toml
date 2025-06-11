@@ -1,5 +1,5 @@
 [phases.setup]
-nixPkgs = ["node"]
+nixPkgs = ["nodejs"]
 
 [phases.install]
 cmds = ["npm ci"]
