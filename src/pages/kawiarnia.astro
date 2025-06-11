@@ -1,82 +1,82 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import MenuItemHighlight from '../components/MenuItemHighlight';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import MenuItemHighlight from "../components/MenuItemHighlight";
 
 const menuCategories = [
-  {
-    title: "Oferta Specjalna",
-    items: [
-      { name: "Naturalny tłoczony sok jabłkowy 'Gabler'", price: "15 zł" },
-      { name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
-      { name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
-      { name: "Piwo rzemieślnicze 'Browarka'", price: "16 zł" },
-    ]
-  },
-  {
-    title: "Kawy",
-    items: [
-      { name: "Frappe 'kawa mrożona z lodami'", price: "17 zł" },
-      { name: "Caffé Latte", price: "14 zł" },
-      { name: "Latte Macchiato", price: "15 zł" },
-      { name: "Cappuccino", price: "13 zł" },
-      { name: "Caffé Crème 'klasyczna, czarna'", price: "10 zł" },
-      { name: "Espresso Macchiato", price: "11 zł" },
-      { name: "Espresso", price: "9 zł" },
-    ]
-  },
-  {
-    title: "Herbata",
-    items: [
-      { name: "Pure Clasic - Czarna", price: "10 zł" },
-      { name: "Pure Earl Grey", price: "10 zł" },
-      { name: "Pure Roibos Infusion", price: "12 zł" },
-      { name: "Pure Green Tea", price: "12 zł" },
-      { name: "Pure Peppermint", price: "12 zł" },
-      { name: "Pure Fruit Infusion", price: "12 zł" },
-    ]
-  },
-  {
-    title: "Napoje",
-    items: [
-      { name: "Woda z lodem i cytryną", price: "8 zł" },
-      { name: "Sok naturalny", price: "12 zł" },
-      { name: "Sok", price: "9 zł" },
-      { name: "Czekolada", price: "14 zł" },
-      { name: "Fuzetea", price: "9 zł" },
-      { name: "Woda gazowana", price: "7 zł" },
-      { name: "Napój energetyczny Yabu", price: "12 zł" },
-      { name: "Fanta, Sprite, Coca-Cola", price: "9 zł" },
-    ]
-  },
-  {
-    title: "Smoothies",
-    items: [
-      { name: "Mango", price: "15 zł" },
-      { name: "Owocowy", price: "15 zł" },
-      { name: "Tropikalny", price: "15 zł" },
-      { name: "Pomarańczowy", price: "15 zł" },
-    ]
-  },
-  {
-    title: "Ciasta i Desery",
-    items: [
-      { name: "Rurka z bitą śmietaną", price: "9 zł" },
-      { name: "Ciasto dnia", price: "14 zł" },
-      { name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
-      { name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
-      { name: "Desery lodowe", price: "16 zł" },
-    ]
-  },
-  {
-    title: "Przekąski",
-    items: [
-      { name: "Zestaw przekąsek z dip'ami", price: "24 zł" },
-      { name: "Nachos", price: "17 zł" },
-      { name: "Paluszki", price: "9 zł" },
-      { name: "Orzeszki", price: "9 zł" },
-    ]
-  }
+	{
+		title: "Oferta Specjalna",
+		items: [
+			{ name: "Naturalny tłoczony sok jabłkowy 'Gabler'", price: "15 zł" },
+			{ name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
+			{ name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
+			{ name: "Piwo rzemieślnicze 'Browarka'", price: "16 zł" },
+		],
+	},
+	{
+		title: "Kawy",
+		items: [
+			{ name: "Frappe 'kawa mrożona z lodami'", price: "17 zł" },
+			{ name: "Caffé Latte", price: "14 zł" },
+			{ name: "Latte Macchiato", price: "15 zł" },
+			{ name: "Cappuccino", price: "13 zł" },
+			{ name: "Caffé Crème 'klasyczna, czarna'", price: "10 zł" },
+			{ name: "Espresso Macchiato", price: "11 zł" },
+			{ name: "Espresso", price: "9 zł" },
+		],
+	},
+	{
+		title: "Herbata",
+		items: [
+			{ name: "Pure Clasic - Czarna", price: "10 zł" },
+			{ name: "Pure Earl Grey", price: "10 zł" },
+			{ name: "Pure Roibos Infusion", price: "12 zł" },
+			{ name: "Pure Green Tea", price: "12 zł" },
+			{ name: "Pure Peppermint", price: "12 zł" },
+			{ name: "Pure Fruit Infusion", price: "12 zł" },
+		],
+	},
+	{
+		title: "Napoje",
+		items: [
+			{ name: "Woda z lodem i cytryną", price: "8 zł" },
+			{ name: "Sok naturalny", price: "12 zł" },
+			{ name: "Sok", price: "9 zł" },
+			{ name: "Czekolada", price: "14 zł" },
+			{ name: "Fuzetea", price: "9 zł" },
+			{ name: "Woda gazowana", price: "7 zł" },
+			{ name: "Napój energetyczny Yabu", price: "12 zł" },
+			{ name: "Fanta, Sprite, Coca-Cola", price: "9 zł" },
+		],
+	},
+	{
+		title: "Smoothies",
+		items: [
+			{ name: "Mango", price: "15 zł" },
+			{ name: "Owocowy", price: "15 zł" },
+			{ name: "Tropikalny", price: "15 zł" },
+			{ name: "Pomarańczowy", price: "15 zł" },
+		],
+	},
+	{
+		title: "Ciasta i Desery",
+		items: [
+			{ name: "Rurka z bitą śmietaną", price: "9 zł" },
+			{ name: "Ciasto dnia", price: "14 zł" },
+			{ name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
+			{ name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
+			{ name: "Desery lodowe", price: "16 zł" },
+		],
+	},
+	{
+		title: "Przekąski",
+		items: [
+			{ name: "Zestaw przekąsek z dip'ami", price: "24 zł" },
+			{ name: "Nachos", price: "17 zł" },
+			{ name: "Paluszki", price: "9 zł" },
+			{ name: "Orzeszki", price: "9 zł" },
+		],
+	},
 ];
 ---
 

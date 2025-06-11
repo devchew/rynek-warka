@@ -1,13 +1,14 @@
 ---
-import MobileMenu from './MobileMenu';
-import ThemeToggle from './ThemeToggle';
+import MobileMenu from "./MobileMenu";
+import logo from "../logo.svg?raw";
 ---
 
-<header class="bg-white dark:bg-stone-800 shadow-md sticky top-0 z-50">
+<header class="bg-white shadow-md sticky top-0 z-50 text-stone-700">
   <div class="container mx-auto px-4">
-    <div class="flex justify-between items-center py-4">      <div class="logo">
-        <a href="/" class="flex items-center">
-          <img src="/logo.png" alt="Rynek Kawiarnia Galeria Logo" class="h-12 md:h-14" />
+    <div class="flex justify-between items-center py-4">      
+      <div class="logo">
+        <a href="/" class="flex items-center h-12 md:h-14">
+          <Fragment set:html={logo} />
         </a>
       </div>
       

@@ -1,59 +1,59 @@
 ---
 const menuCategories = [
-  {
-    title: "Oferta Specjalna",
-    icon: "sparkles",
-    items: [
-      { name: "Naturalny tłoczony sok jabłkowy 'Gabler'", price: "15 zł" },
-      { name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
-      { name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
-      { name: "Piwo rzemieślnicze 'Browarka'", price: "16 zł" },
-    ]
-  },
-  {
-    title: "Kawy",
-    icon: "coffee",
-    items: [
-      { name: "Frappe 'kawa mrożona z lodami'", price: "17 zł" },
-      { name: "Caffé Latte", price: "14 zł" },
-      { name: "Latte Macchiato", price: "15 zł" },
-      { name: "Cappuccino", price: "13 zł" },
-      { name: "Caffé Crème 'klasyczna, czarna'", price: "10 zł" },
-      { name: "Espresso Macchiato", price: "11 zł" },
-      { name: "Espresso", price: "9 zł" },
-    ]
-  },
-  {
-    title: "Herbata",
-    icon: "tea",
-    items: [
-      { name: "Pure Clasic - Czarna", price: "10 zł" },
-      { name: "Pure Earl Grey", price: "10 zł" },
-      { name: "Pure Roibos Infusion", price: "12 zł" },
-      { name: "Pure Green Tea", price: "12 zł" },
-      { name: "Pure Peppermint", price: "12 zł" },
-      { name: "Pure Fruit Infusion", price: "12 zł" },
-    ]
-  }
+	{
+		title: "Oferta Specjalna",
+		icon: "sparkles",
+		items: [
+			{ name: "Naturalny tłoczony sok jabłkowy 'Gabler'", price: "15 zł" },
+			{ name: "Warecka szarlotka na ciepło z lodami", price: "18 zł" },
+			{ name: "Warecka szarlotka na ciepło z bitą śmietaną", price: "16 zł" },
+			{ name: "Piwo rzemieślnicze 'Browarka'", price: "16 zł" },
+		],
+	},
+	{
+		title: "Kawy",
+		icon: "coffee",
+		items: [
+			{ name: "Frappe 'kawa mrożona z lodami'", price: "17 zł" },
+			{ name: "Caffé Latte", price: "14 zł" },
+			{ name: "Latte Macchiato", price: "15 zł" },
+			{ name: "Cappuccino", price: "13 zł" },
+			{ name: "Caffé Crème 'klasyczna, czarna'", price: "10 zł" },
+			{ name: "Espresso Macchiato", price: "11 zł" },
+			{ name: "Espresso", price: "9 zł" },
+		],
+	},
+	{
+		title: "Herbata",
+		icon: "tea",
+		items: [
+			{ name: "Pure Clasic - Czarna", price: "10 zł" },
+			{ name: "Pure Earl Grey", price: "10 zł" },
+			{ name: "Pure Roibos Infusion", price: "12 zł" },
+			{ name: "Pure Green Tea", price: "12 zł" },
+			{ name: "Pure Peppermint", price: "12 zł" },
+			{ name: "Pure Fruit Infusion", price: "12 zł" },
+		],
+	},
 ];
 
 const getIcon = (iconName) => {
-  switch(iconName) {
-    case 'sparkles':
-      return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+	switch (iconName) {
+		case "sparkles":
+			return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
               </svg>`;
-    case 'coffee':
-      return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		case "coffee":
+			return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>`;
-    case 'tea':
-      return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+		case "tea":
+			return `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>`;
-    default:
-      return '';
-  }
+		default:
+			return "";
+	}
 };
 ---
 

@@ -1,60 +1,67 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Header from '../components/Header.astro';
-import GalleryFilter from '../components/GalleryFilter';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import GalleryFilter from "../components/GalleryFilter";
 
 const galleryItems = [
-  {
-    image: "/img/gallery-1.jpg",
-    title: "Rękodzieło lokalne",
-    description: "Unikalne wyroby lokalnych rzemieślników",
-    category: "Rękodzieło"
-  },
-  {
-    image: "/img/gallery-2.jpg",
-    title: "Wyroby ceramiczne", 
-    description: "Ręcznie wykonana ceramika użytkowa i dekoracyjna",
-    category: "Ceramika"
-  },
-  {
-    image: "/img/gallery-3.jpg",
-    title: "Biżuteria artystyczna",
-    description: "Wyjątkowa biżuteria wykonana przez lokalnych artystów",
-    category: "Biżuteria"
-  },
-  {
-    image: "/img/gallery-4.jpg",
-    title: "Sztuka użytkowa",
-    description: "Przedmioty codziennego użytku z artystycznym akcentem",
-    category: "Dekoracje"
-  },
-  {
-    image: "/img/gallery-5.jpg",
-    title: "Dekoracje wnętrz",
-    description: "Stylowe dodatki do wystroju domu",
-    category: "Dekoracje"
-  },
-  {
-    image: "/img/gallery-6.jpg",
-    title: "Obrazy i grafiki",
-    description: "Dzieła lokalnych malarzy i grafików",
-    category: "Obrazy"
-  },
-  {
-    image: "/img/gallery-7.jpg",
-    title: "Przedmioty z drewna",
-    description: "Ręcznie rzeźbione i toczone wyroby z drewna",
-    category: "Rękodzieło"
-  },
-  {
-    image: "/img/gallery-8.jpg",
-    title: "Produkty regionalne",
-    description: "Wyroby charakterystyczne dla regionu wareckiego",
-    category: "Rękodzieło"
-  }
+	{
+		image: "/img/gallery-1.jpg",
+		title: "Rękodzieło lokalne",
+		description: "Unikalne wyroby lokalnych rzemieślników",
+		category: "Rękodzieło",
+	},
+	{
+		image: "/img/gallery-2.jpg",
+		title: "Wyroby ceramiczne",
+		description: "Ręcznie wykonana ceramika użytkowa i dekoracyjna",
+		category: "Ceramika",
+	},
+	{
+		image: "/img/gallery-3.jpg",
+		title: "Biżuteria artystyczna",
+		description: "Wyjątkowa biżuteria wykonana przez lokalnych artystów",
+		category: "Biżuteria",
+	},
+	{
+		image: "/img/gallery-4.jpg",
+		title: "Sztuka użytkowa",
+		description: "Przedmioty codziennego użytku z artystycznym akcentem",
+		category: "Dekoracje",
+	},
+	{
+		image: "/img/gallery-5.jpg",
+		title: "Dekoracje wnętrz",
+		description: "Stylowe dodatki do wystroju domu",
+		category: "Dekoracje",
+	},
+	{
+		image: "/img/gallery-6.jpg",
+		title: "Obrazy i grafiki",
+		description: "Dzieła lokalnych malarzy i grafików",
+		category: "Obrazy",
+	},
+	{
+		image: "/img/gallery-7.jpg",
+		title: "Przedmioty z drewna",
+		description: "Ręcznie rzeźbione i toczone wyroby z drewna",
+		category: "Rękodzieło",
+	},
+	{
+		image: "/img/gallery-8.jpg",
+		title: "Produkty regionalne",
+		description: "Wyroby charakterystyczne dla regionu wareckiego",
+		category: "Rękodzieło",
+	},
 ];
 
-const galleryCategories = ["Wszystko", "Ceramika", "Biżuteria", "Dekoracje", "Obrazy", "Rękodzieło"];
+const galleryCategories = [
+	"Wszystko",
+	"Ceramika",
+	"Biżuteria",
+	"Dekoracje",
+	"Obrazy",
+	"Rękodzieło",
+];
 ---
 
 <Layout title="Galeria | Rynek Kawiarnia Galeria | Warka">
