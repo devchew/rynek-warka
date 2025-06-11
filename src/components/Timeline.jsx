@@ -42,12 +42,12 @@ export default function Timeline() {
 			</h2>
 			<div className="relative">
 				{/* Timeline line */}
-				<div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-amber-200"></div>
+				<div className="absolute left-0 md:left-1/2 transform md:-translate-x-1/2 h-full w-1 bg-amber-200" />
 
 				{/* Events */}
 				{timelineEvents.map((event, index) => (
 					<div
-						key={index}
+						key={event.year}
 						className="relative mb-12"
 						onMouseEnter={() => setActiveEvent(index)}
 						onMouseLeave={() => setActiveEvent(null)}

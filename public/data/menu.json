@@ -1,0 +1,145 @@
+{
+	"categories": [
+		{
+			"title": "Oferta Lokalna",
+			"items": [
+				{
+					"name": "Warecka szarlotka na ciepło z bitą śmietaną",
+					"price": "14 zł"
+				},
+				{ "name": "Warecka szarlotka z lodami", "price": "20 zł" },
+				{ "name": "Naturalny, tłoczony sok jabłkowy", "price": "10 zł" },
+				{
+					"name": "Herbata zimowa z dodatkiem aromatycznych jabłek",
+					"price": "18 zł"
+				},
+				{ "name": "Piwo rzemieślnicze Browarka", "price": "20 zł" },
+				{ "name": "Pochmielone - sok chmielowy", "price": "16 zł" }
+			]
+		},
+		{
+			"title": "Nasza Tłocznia - Soki Naturalne",
+			"items": [
+				{ "name": "Jabłko", "price": "12 zł" },
+				{ "name": "Malina", "price": "12 zł" },
+				{ "name": "Pomarańcza", "price": "14 zł" }
+			]
+		},
+		{
+			"title": "Kawy",
+			"items": [
+				{ "name": "Espresso", "price": "14 zł" },
+				{ "name": "Espresso Doppio", "price": "20 zł" },
+				{ "name": "Espresso Macchiato", "price": "14 zł" },
+				{ "name": "Espresso Tonic", "price": "20 zł" },
+				{ "name": "Caffé Crème 'klasyczna, czarna'", "price": "14 zł" },
+				{ "name": "Cappuccino", "price": "16 zł" },
+				{ "name": "Latte Macchiato", "price": "18 zł" },
+				{ "name": "Caffé Latte", "price": "18 zł" },
+				{ "name": "Frappe", "price": "20 zł" },
+				{ "name": "Affogato", "price": "20 zł" },
+				{ "name": "Syrop do kawy", "price": "3 zł" }
+			]
+		},
+		{
+			"title": "Herbaty",
+			"items": [
+				{ "name": "Pure Classic - Czarna", "price": "8 zł" },
+				{ "name": "Pure Earl Grey", "price": "8 zł" },
+				{ "name": "Pure Green Tea", "price": "8 zł" },
+				{ "name": "Pure Peppermint", "price": "8 zł" },
+				{ "name": "Pure Fruit", "price": "8 zł" }
+			]
+		},
+		{
+			"title": "Lody",
+			"items": [
+				{ "name": "Lody Gałkowe", "price": "6 zł / gałka" },
+				{ "name": "Desery lodowe - mały (2 gałki)", "price": "18 zł" },
+				{ "name": "Desery lodowe - duży (3 gałki)", "price": "24 zł" }
+			]
+		},
+		{
+			"title": "Ciasta",
+			"items": [
+				{
+					"name": "Warecka szarlotka na ciepło z bitą śmietaną",
+					"price": "14 zł"
+				},
+				{
+					"name": "Warecka szarlotka na ciepło z bitą śmietaną i lodami",
+					"price": "20 zł"
+				},
+				{ "name": "Ciasto dnia", "price": "16/20 zł" },
+				{ "name": "Rurka włoska z bitą śmietaną", "price": "8 zł" }
+			]
+		},
+		{
+			"title": "Napoje",
+			"items": [
+				{ "name": "Czekolada", "price": "20 zł" },
+				{ "name": "Sok", "price": "10 zł / szklanka" },
+				{ "name": "Woda niegazowana", "price": "6 zł" },
+				{ "name": "Woda gazowana", "price": "6 zł" },
+				{ "name": "Nestea", "price": "8 zł" },
+				{ "name": "Fanta, Sprite, Coca-Cola", "price": "8 zł" },
+				{ "name": "Lemoniada", "price": "10 zł / szklanka" }
+			]
+		},
+		{
+			"title": "Piwa",
+			"items": [
+				{ "name": "Warka kuflowe 0,3l", "price": "10 zł" },
+				{ "name": "Warka kuflowe 0,5l", "price": "12 zł" },
+				{ "name": "Piwo rzemieślnicze Browarka", "price": "20 zł" },
+				{ "name": "Heineken 0,5l", "price": "12 zł" },
+				{ "name": "Heineken 0% 0,5l", "price": "12 zł" },
+				{ "name": "Żywiec białe 0,5l", "price": "12 zł" },
+				{ "name": "Żywiec białe 0% 0,5l", "price": "12 zł" },
+				{ "name": "Żywiec 0,5l", "price": "12 zł" },
+				{ "name": "Strong 0,5l", "price": "12 zł" },
+				{ "name": "Warka Radler 0% 0,5l", "price": "12 zł" },
+				{ "name": "Królewskie 0,5l", "price": "12 zł" },
+				{ "name": "Piwo grzane 0,5l", "price": "14 zł" }
+			]
+		},
+		{
+			"title": "Wina",
+			"items": [
+				{ "name": "Wino czerwone", "price": "15 zł / lampka, 60 zł / butelka" },
+				{ "name": "Wino różowe", "price": "15 zł / lampka, 60 zł / butelka" },
+				{ "name": "Wino białe", "price": "15 zł / lampka, 60 zł / butelka" },
+				{ "name": "Wino grzane", "price": "20 zł" }
+			]
+		},
+		{
+			"title": "Przekąski",
+			"items": [
+				{ "name": "Orzeszki", "price": "4 zł" },
+				{ "name": "Paluszki", "price": "3 zł" },
+				{ "name": "Precle", "price": "3 zł" }
+			]
+		},
+		{
+			"title": "Drinki",
+			"items": [
+				{ "name": "Martini (Martini bianco, cytryna)", "price": "20 zł" },
+				{
+					"name": "Orange kiss (vermouth pomarańczowy, sok, owoce)",
+					"price": "20 zł"
+				},
+				{
+					"name": "Lime fresh (vermouth limonkowy, sprite, limonka)",
+					"price": "20 zł"
+				},
+				{ "name": "Impress (kamikaze, mojito, cranberry)", "price": "20 zł" },
+				{ "name": "Jack Daniel's 330ml", "price": "20 zł" }
+			]
+		}
+	],
+	"highlights": [
+		{ "name": "Warecka szarlotka z lodami", "price": "20 zł" },
+		{ "name": "Frappe", "price": "20 zł" },
+		{ "name": "Piwo rzemieślnicze Browarka", "price": "20 zł" }
+	]
+}

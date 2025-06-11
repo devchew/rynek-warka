@@ -15,7 +15,7 @@ export default function GalleryFilter({ categories, items }) {
 					const itemCategory = item.category || item.title;
 					return (
 						itemCategory.includes(activeCategory) ||
-						(item.description && item.description.includes(activeCategory))
+						(item.description ?? item.description.includes(activeCategory))
 					);
 				});
 
@@ -23,9 +23,10 @@ export default function GalleryFilter({ categories, items }) {
 		<>
 			<div className="flex justify-center mb-12 overflow-x-auto py-2">
 				<div className="flex gap-2 md:gap-4">
-					{categories.map((category, index) => (
+					{categories.map((category) => (
 						<button
-							key={index}
+							type="button"
+							key={category}
 							onClick={() => handleCategoryClick(category)}
 							className={`px-4 py-2 rounded-full text-sm md:text-base transition-colors ${
 								category === activeCategory
@@ -40,9 +41,9 @@ export default function GalleryFilter({ categories, items }) {
 			</div>
 
 			<div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-				{filteredItems.map((item, index) => (
+				{filteredItems.map((item) => (
 					<div
-						key={index}
+						key={item.title}
 						className="group rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow"
 					>
 						<div className="relative aspect-square overflow-hidden">

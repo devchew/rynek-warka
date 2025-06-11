@@ -6,17 +6,23 @@ import TeamSection from "../components/TeamSection.astro";
 ---
 
 <Layout title="O nas | Rynek Kawiarnia Galeria | Warka">
-  <Header />  <main>
-    <section class="py-16 md:py-24 bg-[url('/img/about-header.jpg')] bg-cover bg-center text-white relative">
-      <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+  <Header />
+  <main>
+    <section
+      class="py-16 md:py-24 bg-[url('/hero.jpg')] bg-cover bg-center text-white relative"
+    >
+      <div class="absolute inset-0 bg-black opacity-60"></div>
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-3xl mx-auto text-center">
-          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h1
+            class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6"
+          >
             O Nas
           </h1>
           <div class="w-24 h-1 bg-amber-800 mx-auto mb-8"></div>
           <p class="text-lg md:text-xl">
-            Poznaj naszą historię i pasję do lokalnego rękodzieła i wyjątkowej kawy
+            Poznaj naszą historię i pasję do lokalnego rękodzieła i wyjątkowej
+            kawy
           </p>
         </div>
       </div>
@@ -26,54 +32,68 @@ import TeamSection from "../components/TeamSection.astro";
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto">
           <div class="mb-12">
-            <h2 class="font-serif text-3xl font-bold text-stone-800 mb-6">Nasza historia</h2>
+            <h2 class="font-serif text-3xl font-bold text-stone-800 mb-6">
+              Nasza historia
+            </h2>
             <p class="text-stone-600 mb-4">
-              Galeria rękodzieła połączona z kawiarnią, to przyjazny i klimatyczny zakątek w centrum miasta. 
-              To miejsce w którym poczujesz, jakby czas się zatrzymał. W otoczeniu stylowych mebli, przedmiotów 
-              z duszą i lokalnego rękodzieła, znajdziesz chwilę wytchnienia.
+              Galeria rękodzieła połączona z kawiarnią, to przyjazny i
+              klimatyczny zakątek w centrum miasta. To miejsce w którym
+              poczujesz, jakby czas się zatrzymał. W otoczeniu stylowych mebli,
+              przedmiotów z duszą i lokalnego rękodzieła, znajdziesz chwilę
+              wytchnienia.
             </p>
             <p class="text-stone-600 mb-4">
-              Aromatyczna kawa, specjały regionalne i pamiątki na długo zostaną w pamięci. 
-              Latem wyjątkowym spotkaniom sprzyja przytulny ogródek z widokiem na rynek, 
-              w którym wszystko smakuje najlepiej.
-            </p>          </div>          <div class="grid md:grid-cols-2 gap-10 mb-12">
+              Aromatyczna kawa, specjały regionalne i pamiątki na długo zostaną
+              w pamięci. Latem wyjątkowym spotkaniom sprzyja przytulny ogródek z
+              widokiem na rynek, w którym wszystko smakuje najlepiej.
+            </p>
+          </div>
+          <div class="grid md:grid-cols-2 gap-10 mb-12">
             <div>
-              <img 
-                src="/img/about-1.jpg" 
-                alt="Wnętrze kawiarni" 
-                class="rounded-lg shadow-md w-full h-auto object-cover mb-4"
+              <img
+                src="/handmade.jpg"
+                alt="Wnętrze kawiarni"
+                class="rounded-lg shadow-md w-full h-120 object-cover mb-4"
               />
             </div>
             <div>
-              <img 
-                src="/img/about-2.jpg" 
-                alt="Galeria rękodzieła" 
-                class="rounded-lg shadow-md w-full h-auto object-cover mb-4"
-              />            </div>
+              <img
+                src="/ogrodek.jpg"
+                alt="Ogródek kawiarni"
+                class="rounded-lg shadow-md w-full h-120 object-cover mb-4"
+              />
+            </div>
           </div>
 
           <Timeline client:visible />
 
           <div class="mb-12">
-            <h2 class="font-serif text-3xl font-bold text-stone-800 mb-6">Nasza misja</h2>
+            <h2 class="font-serif text-3xl font-bold text-stone-800 mb-6">
+              Nasza misja
+            </h2>
             <p class="text-stone-600 mb-4">
-              Naszą misją jest stworzenie wyjątkowego miejsca, które połączy lokalną społeczność, 
-              artystów i miłośników dobrej kawy. Chcemy promować lokalne rękodzieło, 
-              wspierać twórców z regionu i tworzyć przyjazną przestrzeń dla spotkań.
+              Naszą misją jest stworzenie wyjątkowego miejsca, które połączy
+              lokalną społeczność, artystów i miłośników dobrej kawy. Chcemy
+              promować lokalne rękodzieło, wspierać twórców z regionu i tworzyć
+              przyjazną przestrzeń dla spotkań.
             </p>
             <p class="text-stone-600">
-              Zależy nam na tym, aby każdy gość czuł się u nas wyjątkowo. 
-              Dbamy o jakość serwowanych produktów, a także o niepowtarzalny klimat i atmosferę miejsca.
+              Zależy nam na tym, aby każdy gość czuł się u nas wyjątkowo. Dbamy
+              o jakość serwowanych produktów, a także o niepowtarzalny klimat i
+              atmosferę miejsca.
             </p>
-          </div>          <div class="bg-stone-100 rounded-lg p-8 text-center mb-12">
-            <h3 class="font-serif text-2xl font-semibold text-amber-800 mb-4">Założycielki</h3>
+          </div>
+          <div class="bg-stone-100 rounded-lg p-8 text-center mb-12">
+            <h3 class="font-serif text-2xl font-semibold text-amber-800 mb-4">
+              Założycielki
+            </h3>
             <p class="text-stone-700 italic mb-6">
-              "Stworzyłyśmy to miejsce z miłości do sztuki i pasji do dobrej kawy. 
-              Chciałyśmy, aby każdy mógł się tu poczuć jak w domu."
+              "Stworzyłyśmy to miejsce z miłości do sztuki i pasji do dobrej
+              kawy. Chciałyśmy, aby każdy mógł się tu poczuć jak w domu."
             </p>
             <p class="font-medium text-stone-800">Gosia i Aga</p>
           </div>
-          
+
           <TeamSection />
         </div>
       </div>
