@@ -1,32 +1,28 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
-import GalleryFilter from "../components/GalleryFilter";
-import galleryData from "../../public/data/gallery.json";
-
-const galleryItems = galleryData.items;
-const galleryCategories = galleryData.categories;
+import SimpleGallery from "../components/SimpleGallery.astro";
 ---
 
 <Layout title="Galeria | Rynek Kawiarnia Galeria | Warka">
   <Header />
-  <main>    <section class="py-16 md:py-24 bg-[url('/hero2.jpg')] bg-cover bg-center text-white relative">
+  <main>    <section
+      class="py-12 md:py-16 bg-[url('/hero2.jpg')] bg-cover bg-center text-white relative"
+    >
       <div class="absolute inset-0 bg-black opacity-60"></div>
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-3xl mx-auto text-center">
-          <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Sztuka Galerii
+          <h1
+            class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold mb-4"
+          >
+            Galeria
           </h1>
-          <div class="w-24 h-1 bg-amber-800 mx-auto mb-8"></div>
-          <p class="text-lg md:text-xl">
-            Odkryj unikalne lokalne rękodzieło i sztukę
-          </p>
+          <div class="w-24 h-1 bg-amber-800 mx-auto"></div>
         </div>
       </div>
-    </section>    <section class="py-16 bg-white">
+    </section><section class="py-16 bg-white">
       <div class="container mx-auto px-4">
-        <GalleryFilter categories={galleryCategories} items={galleryItems} client:load />
-        </div>
+        <SimpleGallery />
       </div>
     </section>
   </main>

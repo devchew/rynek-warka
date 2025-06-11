@@ -31,8 +31,28 @@ All commands are run from the root of the project, from a terminal:
 | `npm run dev`             | Starts local dev server at `localhost:4321`      |
 | `npm run build`           | Build your production site to `./dist/`          |
 | `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 📦 Deployment with Nixpack
+
+This project supports Nixpack for simplified deployment. Nixpack helps standardize build processes across platforms.
+
+### Nixpack Setup
+
+A `nixpacks.toml` configuration file is included that defines:
+1. Setup phase - installs Node.js and npm 
+2. Install phase - installs project dependencies
+3. Build phase - builds the application
+4. Start command - runs the preview server on the specified port
+
+### Deployment
+
+To deploy using Nixpack:
+
+1. Make sure Nixpack is installed
+2. Run: `nixpacks build .`
+3. Deploy the resulting image to your preferred hosting platform
+
+For platforms that support Procfile (like Heroku), a Procfile is also included.
 
 ## 👀 Want to learn more?
 
